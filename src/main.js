@@ -20,22 +20,26 @@ $(document).ready(function() {
   });
   $("#galactic-time-left").submit( function(event) {
     event.preventDefault();
-    const country = $(".country").val();
-    const gender = parseInt($(".gender").val());
-    const smoker = $(".smoker").val();
-    const activity = parseInt($(".activity").val());
-    const diet = parseInt($(".diet").val());
-    newUser.country = country;
-    newUser.gender = gender;
-    newUser.smoker = smoker;
-    newUser.activity = activity;
-    newUser.diet = diet;
-    newUser.lifeExpEarth = newUser.lifeExpectancy();
-    newUser.galacticLifeExp();
-    $(".time-left").append("<li>" + newUser.lifeLeft("Mercury") + "</li>");
-    $(".time-left").append("<li>" + newUser.lifeLeft("Venus") + "</li>");
-    $(".time-left").append("<li>" + newUser.lifeLeft("Mars") + "</li>");
-    $(".time-left").append("<li>" + newUser.lifeLeft("Jupiter") + "</li>");
-    console.log(newUser);
+    $(".time-left").empty();
+     if (newUser.Earth > 0) {
+       const country = $(".country").val();
+       const gender = parseInt($(".gender").val());
+       const smoker = $(".smoker").val();
+       const activity = parseInt($(".activity").val());
+       const diet = parseInt($(".diet").val());
+       newUser.country = country;
+       newUser.gender = gender;
+       newUser.smoker = smoker;
+       newUser.activity = activity;
+       newUser.diet = diet;
+       newUser.lifeExpEarth = newUser.lifeExpectancy();
+       newUser.galacticLifeExp();
+       $(".time-left").append("<li>" + newUser.lifeLeft("Mercury") + "</li>");
+       $(".time-left").append("<li>" + newUser.lifeLeft("Venus") + "</li>");
+       $(".time-left").append("<li>" + newUser.lifeLeft("Mars") + "</li>");
+       $(".time-left").append("<li>" + newUser.lifeLeft("Jupiter") + "</li>");
+     } else {
+       alert("Please enter your age first!");
+     }
   });
 });

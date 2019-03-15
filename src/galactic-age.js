@@ -47,7 +47,8 @@ export class User {
 
   lifeLeft(planet) {
     const lifeExpKey = "lifeExp" + planet;
-    const lifeLeft = this[lifeExpKey] - this[planet];
+    const lifeLeftU = this[lifeExpKey] - this[planet];
+    const lifeLeft = Math.round(lifeLeftU*100)/100;
     if (lifeLeft > 0) {
       return "You'll likely live on " + planet + " for " + lifeLeft + " more "+ planet + " years!";
     } else {

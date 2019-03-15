@@ -10,6 +10,9 @@ body {
 .btn {
   background-color: #5e85bd;
   height: 35px;
+  &:hover {
+    background-color: #85e9f9;
+  }
 }
 
 li {
@@ -22,7 +25,7 @@ p {
 }
 
 #galactic-age {
-  background-color: transparentize(#eaebdd, 0.5);
+  background-color: transparentize(#95c2e6, 0.7);
   padding: 30px;
   border-radius: 6px;
   .form-group {
@@ -45,4 +48,13 @@ p {
   .form-group {
     margin-left: 5%;
   }
+}
+
+footer {
+  background: url("../assets/img/solar.jpg");
+  background-size: cover;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  height: 300px;
+  margin-top: 100px;
 }
