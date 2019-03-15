@@ -10,7 +10,9 @@ export class User {
   }
 
   mercuryAge() {
-    
+    const mercury = this.earth * 0.24;
+    const mercuryRounded = Math.round( mercury * 10 )/10;
+    this.mercury = mercuryRounded;
   }
 
 
