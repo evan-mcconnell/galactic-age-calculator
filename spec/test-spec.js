@@ -6,7 +6,7 @@ describe ('User', function() {
   let lifeExpect = 0;
 
   beforeAll( function() {
-    testUser = new User(1, "USA", true, 2, 3, 30);
+    testUser = new User(1, "USA", "true", 2, 3, 30);
     lifeExpect = testUser.lifeExpectancy();
     testUser.lifeExpEarth = lifeExpect;
     testUser.galacticAges();
@@ -35,15 +35,15 @@ describe ('User', function() {
   });
 
   it ('should have an accurate value for user\'s life expectancy on mercury', () => {
-    expect(testUser.lifeExpMercury).toEqual(350);
+    expect(testUser.lifeExpMercury).toEqual(320);
   });
 
   it ('should output a string describing how many years are left to live on selected planet', () => {
     const lifeLeft = testUser.lifeLeft("Mercury");
-    expect(lifeLeft).toEqual("You'll likely live on Mercury for 225 more Mercury years!");
+    expect(lifeLeft).toEqual("You'll likely live on Mercury for 195 more Mercury years!");
   });
 
   it ('should calculate life expectancy based on user data', () => {
-    expect(lifeExpect).toEqual(84);
+    expect(lifeExpect).toEqual(77);
   });
 });

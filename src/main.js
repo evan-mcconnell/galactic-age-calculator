@@ -30,8 +30,12 @@ $(document).ready(function() {
     newUser.smoker = smoker;
     newUser.activity = activity;
     newUser.diet = diet;
-    const lifeOnEarth = newUser.lifeExpectancy();
+    newUser.lifeExpEarth = newUser.lifeExpectancy();
+    newUser.galacticLifeExp();
+    console.log(newUser.lifeExpEarth);
+    const merc = newUser.lifeLeft("Mercury");
+    console.log(newUser.lifeLeft("Mercury"));
+    $(".time-left").append("<li>" + merc + "</li>");
     console.log(newUser);
-    console.log(lifeOnEarth);
   });
 });

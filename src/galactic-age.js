@@ -59,9 +59,9 @@ export class User {
     // gender: number(1=male,2=female,3=neither/both), country: string, smoker: string, activity: number 1-3, diet: number 1-3
     let expect = 0;
     if (this.gender === 1) {
-      expect += 76.4;
+      expect += 77;
     } else if (this.gender === 2) {
-      expect += 81.2;
+      expect += 81;
     } else {
       expect += 79;
     }
