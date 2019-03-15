@@ -55,29 +55,29 @@ export class User {
     }
   }
 
-  lifeExpectancy(gender, country, smoker, activity, diet) {
-    // gender: number(1=male,2=female,3=neither/both), country: string, smoker: boolean, activity: number 1-3, diet: number 1-3
+  lifeExpectancy() {
+    // gender: number(1=male,2=female,3=neither/both), country: string, smoker: string, activity: number 1-3, diet: number 1-3
     let expect = 0;
-    if (gender === 1) {
+    if (this.gender === 1) {
       expect += 76.4;
-    } else if (gender === 2) {
+    } else if (this.gender === 2) {
       expect += 81.2;
     } else {
       expect += 79;
     }
-    if (smoker == true) {
+    if (this.smoker === "true") {
       expect -= 5;
     } else {
       expect += 5;
     }
-    if (activity === 1) {
+    if (this.activity === 1) {
       expect -= 5
-    } else if (activity === 3) {
+    } else if (this.activity === 3) {
       expect += 5;
     }
-    if (diet === 1) {
+    if (this.diet === 1) {
       expect -= 10;
-    } else if (diet === 3) {
+    } else if (this.diet === 3) {
       expect += 5;
     }
     return expect;
