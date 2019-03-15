@@ -32,10 +32,10 @@ $(document).ready(function() {
     newUser.diet = diet;
     newUser.lifeExpEarth = newUser.lifeExpectancy();
     newUser.galacticLifeExp();
-    console.log(newUser.lifeExpEarth);
-    const merc = newUser.lifeLeft("Mercury");
-    console.log(newUser.lifeLeft("Mercury"));
-    $(".time-left").append("<li>" + merc + "</li>");
+    $(".time-left").append("<li>" + newUser.lifeLeft("Mercury") + "</li>");
+    $(".time-left").append("<li>" + newUser.lifeLeft("Venus") + "</li>");
+    $(".time-left").append("<li>" + newUser.lifeLeft("Mars") + "</li>");
+    $(".time-left").append("<li>" + newUser.lifeLeft("Jupiter") + "</li>");
     console.log(newUser);
   });
 });

@@ -9,13 +9,40 @@ body {
 
 .btn {
   background-color: #5e85bd;
+  height: 35px;
 }
 
-.planetary-ages {
-  li {
-    list-style: none;
+li {
+  list-style-type: none;
+}
+
+p {
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+#galactic-age {
+  background-color: transparentize(#eaebdd, 0.5);
+  padding: 30px;
+  border-radius: 6px;
+  .form-group {
+    margin-left: 5%;
+  }
+  .btn {
+    margin: 10px 0 0 0;
+  }
+  .planetary-ages {
     span {
       font-size: 1.2em;
     }
+  }
+}
+
+#galactic-time-left {
+  background-color: transparentize(#83abd0, 0.7);
+  padding: 30px;
+  border-radius: 6px;
+  .form-group {
+    margin-left: 5%;
   }
 }
