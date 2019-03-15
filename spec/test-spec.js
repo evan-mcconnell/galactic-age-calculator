@@ -14,11 +14,19 @@ describe ('User', function() {
   });
 
   it ('should have an accurate value for user\'s mercury age', () => {
-    expect(testUser.mercury).toEqual(7.2);
+    expect(testUser.mercury).toEqual(125);
   });
 
   it ('should have an accurate value for user\'s venus age', () => {
-    expect(testUser.venus).toEqual(18.6);
+    expect(testUser.venus).toEqual(48);
+  });
+
+  it ('should have an accurate value for user\'s mars age', () => {
+    expect(testUser.mars).toEqual(15);
+  });
+
+  it ('should have an accurate value for user\'s jupiter age', () => {
+    expect(testUser.jupiter).toEqual(2.5);
   });
 
 

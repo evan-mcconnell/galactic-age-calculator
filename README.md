@@ -10,6 +10,8 @@ _Want to know how many Mercury years you'd have left to live (on average) if you
 
 ## Specs
 
+* Calculate the user's age from their birth year with Date object
+
 * Create a User object that contains their Earth Age as entered <br>
   _Example: newUser {earthAge: 28};_
 
@@ -24,6 +26,7 @@ _Conversion: Mercury year = 0.24 earth years_
 
 * Convert earth age into Jupiter years <br>
   _Conversion: Jupiter year = 11.86 earth years_
+  _Jupiter years will be rounded to one decimal to more accurately reflect age. 
 
 Two possibilities for life expectancy-
 

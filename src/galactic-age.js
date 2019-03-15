@@ -10,16 +10,16 @@ export class User {
   }
 
   galacticAges() {
-    const mercury = this.earth * 0.24;
-    const mercuryRounded = Math.round( mercury * 10 )/10;
+    const mercury = this.earth / 0.24;
+    const mercuryRounded = Math.floor( mercury );
     this.mercury = mercuryRounded;
-    const venus = this.earth * 0.62;
-    const venusRounded = Math.round( venus * 10 )/10;
+    const venus = this.earth / 0.62;
+    const venusRounded = Math.floor( venus );
     this.venus = venusRounded;
-    const mars = this.earth * 0.24;
-    const marsRounded = Math.round( mars * 10 )/10;
+    const mars = this.earth / 1.88;
+    const marsRounded = Math.floor( mars );
     this.mars = marsRounded;
-    const jupiter = this.earth * 0.24;
+    const jupiter = this.earth / 11.86;
     const jupiterRounded = Math.round( jupiter * 10 )/10;
     this.jupiter = jupiterRounded;
   }
