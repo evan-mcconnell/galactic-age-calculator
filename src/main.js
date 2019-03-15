@@ -9,6 +9,7 @@ $(document).ready(function() {
   $("#galactic-age").submit( function(event) {
     event.preventDefault();
     $(".planetary-ages").empty();
+    $(".time-left").empty();
     const age = $("input").val();
     newUser.Earth = age;
     newUser.galacticAges();
