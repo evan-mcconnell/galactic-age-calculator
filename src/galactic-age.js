@@ -13,10 +13,6 @@ export class User {
     this.Mars = mars;
     this.Jupiter = jupiter;
     this.lifeExpEarth = lifeExpEarth;
-    // this.lifeExpMercury = lifeExpMercury;
-    // this.lifeExpVenus = lifeExpVenus;
-    // this.lifeExpMars = lifeExpMars;
-    // this.lifeExpJupiter = lifeExpJupiter;
   }
 
   galacticAges() {

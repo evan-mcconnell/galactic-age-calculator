@@ -3,6 +3,15 @@ body {
 }
 
 .jumbotron {
-  // background: url("../assets/img/planets.jpg");
+  background: url("../assets/img/planets.jpg");
   background-size: cover;
+}
+
+.planetary-ages {
+  li {
+    list-style: none;
+    span {
+      font-size: 1.2em;
+    }
+  }
 }
