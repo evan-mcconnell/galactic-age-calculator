@@ -56,9 +56,11 @@ export class User {
   lifeLeft(planet) {
     const lifeExpKey = "lifeExp" + planet;
     const lifeLeft = this[lifeExpKey] - this[planet];
-    return lifeLeft;
-    // console.log(this[planet]);
-    // console.log(lifeLeft);
+    if (lifeLeft > 0) {
+      return "You'll likely live on " + planet + " for " + lifeLeft + " more "+ planet + " years!";
+    } else {
+      return "dead";
+    }
   }
 
 
