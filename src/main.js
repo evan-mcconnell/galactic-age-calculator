@@ -5,5 +5,5 @@ import './sass/styles.scss';
 import { User } from './galactic-age';
 
 $(document).ready(function() {
-
+  
 });

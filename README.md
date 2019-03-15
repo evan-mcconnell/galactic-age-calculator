@@ -8,6 +8,8 @@
 
 _Want to know how many Mercury years you'd have left to live (on average) if you lived on Mercury? Asside from the fact that you'd have long become human toast, that is; we'll assume technology has progresses to make this possible. Simply enter your age to get started. To see how long you'd have left to live, enter the average life expectancy that you'd experience on Earth._
 
+Note: _This program will calculate life expectancy based on data you enter. I am not an expert in life expectancy, and the calculator is absolutely not very accurate. Calculations are based on my own broad estimates based on data gathered in some quick Google searches (links listed further down).
+
 ## Specs
 
 * Calculate the user's age from their birth year with Date object
@@ -67,7 +69,11 @@ Two possibilities for life expectancy-
 
 
 
-
+## Resources Used for Life Expectancy Calculator:
+* https://en.wikipedia.org/wiki/List_of_countries_by_life_expectancy
+* https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3395188/
+* https://www.nih.gov/news-events/news-releases/nih-study-finds-extreme-obesity-may-shorten-life-expectancy-14-years
+* I made an attempt to find data on non-binary/gender-queer life expectancies, but data seems to be laking in that area. I found nothing conclusive; therefore the calculator simply uses an approximate average of male and female lifespans.
 
 
 
