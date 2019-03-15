@@ -38,11 +38,6 @@ describe ('User', function() {
     expect(testUser.lifeExpMercury).toEqual(350);
   });
 
-  // it ('should output a string describing how many years are left to live on a planet', () => {
-  //   const lifeLeft = testUser.lifeLeftEarth();
-  //   expect(testUser.lifeLeftEarth()).toEqual("You'll likely live on Earth for 40 more Earth years!");
-  // });
-
   it ('should output a string describing how many years are left to live on selected planet', () => {
     const lifeLeft = testUser.lifeLeft("Mercury");
     expect(lifeLeft).toEqual("You'll likely live on Mercury for 225 more Mercury years!");

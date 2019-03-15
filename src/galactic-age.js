@@ -49,22 +49,13 @@ export class User {
     this.lifeExpJupiter = jupiterRounded;
   }
 
-  // lifeLeftEarth() {
-  //   const earthExp = this.lifeExpEarth - this.Earth;
-  //   if (earthExp > 0) {
-  //     return "You'll likely live on Earth for " + earthExp + " more Earth years!";
-  //   } else {
-  //     return "dead";
-  //   }
-  // }
-
   lifeLeft(planet) {
     const lifeExpKey = "lifeExp" + planet;
     const lifeLeft = this[lifeExpKey] - this[planet];
     if (lifeLeft > 0) {
       return "You'll likely live on " + planet + " for " + lifeLeft + " more "+ planet + " years!";
     } else {
-      return "You've lived " + Math.abs(lifeLeft) + " " + planet + " years beyong your expected life span!";
+      return "You've lived " + Math.abs(lifeLeft) + " " + planet + "-years beyong your expected life span!";
     }
   }
 
@@ -95,5 +86,4 @@ export class User {
     }
     return expect;
   }
-
 }
