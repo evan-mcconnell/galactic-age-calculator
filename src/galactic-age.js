@@ -2,11 +2,11 @@
 
 export class User {
   constructor (earth, mercury, venus, mars, jupiter){
-    this.earth = earth;
-    this.mercury = mercury;
-    this.venus = venus;
-    this.mars = mars;
-    this.jupiter = jupiter;
+    this.Earth = earth;
+    this.Mercury = mercury;
+    this.Venus = venus;
+    this.Mars = mars;
+    this.Jupiter = jupiter;
     // this.lifeExpEarth = lifeExpEarth;
     // this.lifeExpMercury = lifeExpMercury;
     // this.lifeExpVenus = lifeExpVenus;
@@ -15,18 +15,18 @@ export class User {
   }
 
   galacticAges() {
-    const mercury = this.earth / 0.24;
+    const mercury = this.Earth / 0.24;
     const mercuryRounded = Math.floor( mercury );
-    this.mercury = mercuryRounded;
-    const venus = this.earth / 0.62;
+    this.Mercury = mercuryRounded;
+    const venus = this.Earth / 0.62;
     const venusRounded = Math.floor( venus );
-    this.venus = venusRounded;
-    const mars = this.earth / 1.88;
+    this.Venus = venusRounded;
+    const mars = this.Earth / 1.88;
     const marsRounded = Math.floor( mars );
-    this.mars = marsRounded;
-    const jupiter = this.earth / 11.86;
+    this.Mars = marsRounded;
+    const jupiter = this.Earth / 11.86;
     const jupiterRounded = Math.round( jupiter * 10 )/10;
-    this.jupiter = jupiterRounded;
+    this.Jupiter = jupiterRounded;
   }
 
   galacticLifeExp() {
@@ -45,13 +45,20 @@ export class User {
   }
 
   lifeLeftEarth() {
-    const earthExp = this.lifeExpEarth - this.earth;
-    console.log(earthExp);
+    const earthExp = this.lifeExpEarth - this.Earth;
     if (earthExp > 0) {
       return "You'll likely live on Earth for " + earthExp + " more Earth years!";
     } else {
       return "dead";
     }
+  }
+
+  lifeLeft(planet) {
+    const lifeExpKey = "lifeExp" + planet;
+    const lifeLeft = this[lifeExpKey] - this[planet];
+    return lifeLeft;
+    // console.log(this[planet]);
+    // console.log(lifeLeft);
   }
 
 
