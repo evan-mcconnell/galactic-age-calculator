@@ -26,7 +26,7 @@ _Conversion: Mercury year = 0.24 earth years_
 
 * Convert earth age into Jupiter years <br>
   _Conversion: Jupiter year = 11.86 earth years_
-  _Jupiter years will be rounded to one decimal to more accurately reflect age. 
+  _Jupiter years will be rounded to one decimal to more accurately reflect age._
 
 Two possibilities for life expectancy-
 
