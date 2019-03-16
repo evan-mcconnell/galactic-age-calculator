@@ -17,37 +17,28 @@ export class User {
 
   galacticAges() {
     const mercury = this.Earth / 0.24;
-    const mercuryRounded = Math.floor( mercury );
-    this.Mercury = mercuryRounded;
+    this.Mercury = parseInt(mercury.toFixed());
     const venus = this.Earth / 0.62;
-    const venusRounded = Math.floor( venus );
-    this.Venus = venusRounded;
+    this.Venus = parseInt(venus.toFixed());
     const mars = this.Earth / 1.88;
-    const marsRounded = Math.floor( mars );
-    this.Mars = marsRounded;
+    this.Mars = parseInt(mars.toFixed());
     const jupiter = this.Earth / 11.86;
-    const jupiterRounded = Math.round( jupiter * 10 )/10;
-    this.Jupiter = jupiterRounded;
+    this.Jupiter = parseFloat(jupiter.toFixed(2));
   }
 
   galacticLifeExp() {
     const mercury = this.lifeExpEarth / 0.24;
-    const mercuryRounded = Math.floor( mercury );
-    this.lifeExpMercury = mercuryRounded;
+    this.lifeExpMercury = parseInt(mercury.toFixed());
     const venus = this.lifeExpEarth / 0.62;
-    const venusRounded = Math.floor( venus );
-    this.lifeExpVenus = venusRounded;
+    this.lifeExpVenus = parseInt(venus.toFixed());
     const mars = this.lifeExpEarth / 1.88;
-    const marsRounded = Math.floor( mars );
-    this.lifeExpMars = marsRounded;
+    this.lifeExpMars = parseInt(mars.toFixed());
     const jupiter = this.lifeExpEarth / 11.86;
-    const jupiterRounded = Math.round( jupiter * 10 )/10;
-    this.lifeExpJupiter = jupiterRounded;
+    this.lifeExpJupiter = parseFloat(jupiter.toFixed(2));
   }
 
   lifeLeft(planet) {
-    const lifeExpKey = "lifeExp" + planet;
-    const lifeLeftU = this[lifeExpKey] - this[planet];
+    const lifeLeftU = this[`lifeExp${planet}`] - this[planet];
     const lifeLeft = Math.round(lifeLeftU*100)/100;
     if (lifeLeft > 0) {
       return "You'll likely live on " + planet + " for " + lifeLeft + " more "+ planet + " years!";
