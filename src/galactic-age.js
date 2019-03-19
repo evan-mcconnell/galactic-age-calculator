@@ -1,18 +1,22 @@
 
 
 export class User {
-  constructor (gender, country, smoker, activity, diet, earth, mercury, venus, mars, jupiter, lifeExpEarth){
+  constructor (gender, country, smoker, activity, diet, birthday){
     this.gender = gender;
     this.country = country;
     this.smoker = smoker;
     this.activity = activity;
     this.diet = diet;
-    this.Earth = earth;
-    this.Mercury = mercury;
-    this.Venus = venus;
-    this.Mars = mars;
-    this.Jupiter = jupiter;
-    this.lifeExpEarth = lifeExpEarth;
+    this.birthday = birthday;
+  }
+
+  earthAge() {
+    const birthArray = this.birthday.split("/");
+    const birthdate = new Date (parseInt(birthArray[2]), parseInt(birthArray[0])-1, parseInt(birthArray[1]));
+    console.log(birthArray);
+    console.log(birthdate);
+    const age = (Date.now() - birthdate.getTime())/1000/60/60/24/365;
+    return age;
   }
 
   galacticAges() {

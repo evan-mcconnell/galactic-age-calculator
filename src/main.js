@@ -6,12 +6,15 @@ import { User } from '../src/galactic-age';
 
 $(document).ready(function() {
   let newUser = new User();
+  newUser.birthday = "2/7/1991";
+  newUser.earthAge();
   $("#galactic-age").submit( function(event) {
     event.preventDefault();
     $(".planetary-ages").empty();
     $(".time-left").empty();
     const age = $("input").val();
-    newUser.Earth = age;
+    newUser.birthday = age;
+    newUser.Earth = newUser.earthAge();
     newUser.galacticAges();
     $(".planetary-ages").append("<li>Your age on Mercury would be <span>" + newUser.Mercury + "</span>.</li>");
     $(".planetary-ages").append("<li>Your age on Venus would be <span>" + newUser.Venus + "</span>.</li>");

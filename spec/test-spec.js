@@ -14,7 +14,8 @@ describe ('User', function() {
     // console.log(testUser);
   });
 
-  it ('should have a value for user\'s earth age', () => {
+  it ('should have a value for user\'s earth age based on birthday', () => {
+
     expect(testUser.Earth).toEqual(30);
   });
 
