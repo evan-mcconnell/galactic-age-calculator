@@ -1,13 +1,14 @@
 
 
 export class User {
-  constructor (gender, country, smoker, activity, diet, birthday){
+  constructor (gender, country, smoker, activity, diet, birthday, Earth){
     this.gender = gender;
     this.country = country;
     this.smoker = smoker;
     this.activity = activity;
     this.diet = diet;
     this.birthday = birthday;
+    this.Earth = Earth;
   }
 
   earthAge() {
@@ -16,7 +17,7 @@ export class User {
     console.log(birthArray);
     console.log(birthdate);
     const age = (Date.now() - birthdate.getTime())/1000/60/60/24/365;
-    return age;
+    return Math.round(age*100)/100;
   }
 
   galacticAges() {

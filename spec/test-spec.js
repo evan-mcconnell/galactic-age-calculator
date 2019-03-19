@@ -6,17 +6,17 @@ describe ('User', function() {
   let lifeExpect = 0;
 
   beforeAll( function() {
-    testUser = new User(1, "USA", "true", 2, 3, 30);
+    testUser = new User(1, "USA", "true", 2, 3, "2/7/1991", 30);
+    // testUser.Earth = testUser.earthAge();
     lifeExpect = testUser.lifeExpectancy();
     testUser.lifeExpEarth = lifeExpect;
     testUser.galacticAges();
     testUser.galacticLifeExp();
-    // console.log(testUser);
+    // const passageOfTime = Date.now() - testUser.Earth*24*60*60*1000;
   });
 
   it ('should have a value for user\'s earth age based on birthday', () => {
-
-    expect(testUser.Earth).toEqual(30);
+    expect(passageOfTime).toEqual(28.13);
   });
 
   it ('should have an accurate value for user\'s mercury age', () => {
