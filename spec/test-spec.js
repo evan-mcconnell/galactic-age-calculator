@@ -17,7 +17,8 @@ describe ('User', function() {
   it ('should have a value for user\'s earth age based on birthday', () => {
     testUser.Earth = testUser.earthAge();
     const birth = new Date(1991, 1, 7);
-    expect(testUser.Earth).toEqual((birth.getTime() - Date.now())/1000/60/60/24/360);
+    console.log(birth);
+    expect(testUser.Earth).toEqual(Math.round(((Date.now()-birth.getTime())/1000/60/60/24/365)*100)/100);
   });
 
   it ('should have an accurate value for user\'s mercury age', () => {
